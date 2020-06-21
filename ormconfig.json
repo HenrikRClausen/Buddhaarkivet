@@ -1,24 +1,18 @@
 {
-   "type": "mysql",
-   "host": "192.168.0.25",
-   "port": 3307,
-   "username": "Henrik",
-   "password": "Wisteria_2004",
-   "database": "Buddhaarkivet",
-   "synchronize": false,
-   "logging": false,
-   "entities": [
-      "src/entity/**/*.ts"
-   ],
-   "migrations": [
-      "src/migration/**/*.ts"
-   ],
-   "subscribers": [
-      "src/subscriber/**/*.js"
-   ],
-   "cli": {
-      "entitiesDir": "src/entity",
-      "migrationsDir": "src/migration",
-      "subscribersDir": "src/subscriber"
-   }
+  "type": "mysql",
+  "host": "192.168.0.25",
+  "port": 3307,
+  "username": "Henrik",
+  "password": "Wisteria_2004",
+  "database": "Buddhaarkivet",
+  "synchronize": false,
+  "logging": false,
+  "entities": ["src/entity/**/*.ts"],
+  "migrations": ["src/migration/**/*.ts"],
+  "subscribers": ["src/subscriber/**/*.js"],
+  "cli": {
+    "entitiesDir": "src/entity",
+    "migrationsDir": "src/migration",
+    "subscribersDir": "src/subscriber"
+  }
 }
