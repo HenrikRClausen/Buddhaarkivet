@@ -1,16 +1,22 @@
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
 @Entity()
-export class Lærer {
+export class Sprog {
   @PrimaryGeneratedColumn()
   Id: number;
 
   @Column()
-  Navn: string;
+  Dansk: string;
 
   @Column()
-  Linje: string;
+  Engelsk: string;
 
   @Column()
-  Diamantvej: boolean;
+  Sanskrit: string;
+
+  @Column()
+  Tibetansk: string;
+
+  @Column()
+  Tysk: string;
 }

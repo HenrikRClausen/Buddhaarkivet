@@ -1,21 +1,20 @@
-import {Entity, PrimaryGeneratedColumn, Column, ManyToOne} from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
 import { Sted } from "./Sted";
 
 @Entity()
 export class Begivenhed {
+  @PrimaryGeneratedColumn()
+  Id: number;
 
-    @PrimaryGeneratedColumn()
-    Id: number;
+  @Column()
+  Navn: string;
 
-    @Column()
-    Navn: string;
+  @ManyToOne((_type) => Sted, (Sted) => Sted.Begivenheder)
+  public sted: Sted;
 
-    @ManyToOne(_ => Sted, inverseSide => inverseSide.Id)
-    public Sted: Sted;
+  @Column()
+  StartDato: Date;
 
-    @Column()
-    StartDato: Date;
-
-    @Column()
-    SlutDato: Date;
+  @Column()
+  SlutDato: Date;
 }

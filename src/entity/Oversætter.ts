@@ -1,17 +1,17 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
-import { Begivenhed } from "./Begivenhed";
+import { Sprog } from "./Sprog";
 
 @Entity()
-export class Dag {
+export class Oversætter {
   @PrimaryGeneratedColumn()
   Id: number;
 
   @Column()
   Navn: string;
 
-  @ManyToOne((_) => Begivenhed, (inverseSide) => inverseSide.Id)
-  public Begivenhed: Begivenhed;
+  @ManyToOne((_type) => Sprog, (inverseSide) => inverseSide.Id)
+  Sprog: Sprog;
 
   @Column()
-  Dato: Date;
+  Land: string;
 }

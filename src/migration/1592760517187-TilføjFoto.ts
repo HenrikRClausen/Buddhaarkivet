@@ -11,7 +11,7 @@ export class TilføjFoto1592760517187 implements MigrationInterface {
                 Dato DATETIME,
                 Farve TINYINT,
                 Højde INT,
-                Breddte INT,
+                Bredde INT,
                 CONSTRAINT FK_Foto_Dag FOREIGN KEY (DagId) REFERENCES dag(Id),
                 CONSTRAINT FK_Foto_Sted FOREIGN KEY (StedId) REFERENCES sted(Id)
                 )`
