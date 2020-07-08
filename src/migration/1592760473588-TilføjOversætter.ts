@@ -6,7 +6,8 @@ export class TilføjOversætter1592760473588 implements MigrationInterface {
       `CREATE TABLE oversætter (
                 Id INT PRIMARY KEY AUTO_INCREMENT, 
                 Navn VARCHAR(80),
-                SprogId INT
+                SprogId INT,
+                CONSTRAINT FK_OversætterSprog FOREIGN KEY (SprogId) REFERENCES sprog(Id),
                 )`
     );
   }

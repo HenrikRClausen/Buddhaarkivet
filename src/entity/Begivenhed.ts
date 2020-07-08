@@ -9,7 +9,7 @@ export class Begivenhed {
   @Column()
   Navn: string;
 
-  @ManyToOne((_type) => Sted, (Sted) => Sted.Begivenheder)
+  @ManyToOne((_type) => Sted, (Sted) => Sted.Id)
   public sted: Sted;
 
   @Column()

@@ -14,7 +14,4 @@ export class Sted {
 
   @Column()
   Land: string;
-
-  @Column()
-  Begivenheder: Begivenhed[];
 }
